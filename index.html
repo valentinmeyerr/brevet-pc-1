@@ -6,23 +6,15 @@
 <title>Évaluation Physique-Chimie — 3ème</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --blue:#1A4FA0; --blue-light:#EAF0FB; --blue-mid:#C5D6F5;
-  --amber:#7A4500; --amber-bg:#FEF3E2;
-  --green:#1E5C2E; --green-bg:#E8F5EC;
-  --red:#7A1A1A; --red-bg:#FDE8E8;
-  --border:#DDDDE5; --text:#1A1A2E; --muted:#6B6B80; --gray-light:#F5F5F7;
-}
+:root{--blue:#1A4FA0;--blue-light:#EAF0FB;--blue-mid:#C5D6F5;--amber:#7A4500;--amber-bg:#FEF3E2;--green:#1E5C2E;--green-bg:#E8F5EC;--red:#7A1A1A;--red-bg:#FDE8E8;--border:#DDDDE5;--text:#1A1A2E;--muted:#6B6B80;--gray-light:#F5F5F7;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:"DM Sans",sans-serif;background:#F7F7FA;color:var(--text);min-height:100vh;}
-
 .page-header{background:var(--blue);color:white;padding:2rem 2.5rem 1.5rem;border-bottom:4px solid #0F2D6B;}
 .page-header .discipline{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-bottom:6px;}
 .page-header h1{font-family:"Source Serif 4",serif;font-size:26px;font-weight:600;line-height:1.25;margin-bottom:4px;}
 .page-header .sub{font-size:13px;opacity:.7;}
-
 .meta-bar{background:white;border-bottom:1px solid var(--border);padding:.75rem 2.5rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .timer-wrap{display:flex;align-items:center;gap:8px;margin-left:auto;}
 .timer-label{font-size:12px;color:var(--muted);}
@@ -31,20 +23,16 @@ body{font-family:"DM Sans",sans-serif;background:#F7F7FA;color:var(--text);min-h
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 .progress-wrap{height:3px;background:var(--border);}
 #progress-bar{height:3px;background:var(--blue);transition:width .4s ease;}
-
 .container{max-width:760px;margin:0 auto;padding:2rem 1.5rem;}
-
 .identity-card{background:white;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .field-group{display:flex;flex-direction:column;gap:5px;}
 .field-group label{font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
 .field-group input{padding:9px 12px;font-family:"DM Sans",sans-serif;font-size:15px;border:1px solid var(--border);border-radius:7px;background:var(--gray-light);color:var(--text);transition:border-color .2s,background .2s;}
 .field-group input:focus{outline:none;border-color:var(--blue);background:white;}
-
 .section-header{display:flex;align-items:center;gap:12px;margin:2.5rem 0 1rem;}
 .section-header .num{width:28px;height:28px;border-radius:50%;background:var(--blue);color:white;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .section-header h2{font-family:"Source Serif 4",serif;font-size:17px;font-weight:600;}
 .section-divider{height:1px;background:var(--border);margin:2rem 0;}
-
 .question-card{background:white;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s,box-shadow .2s;}
 .question-card:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,79,160,.08);}
 .question-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;}
@@ -59,19 +47,16 @@ body{font-family:"DM Sans",sans-serif;background:#F7F7FA;color:var(--text);min-h
 .picto-block .caption{font-size:13px;color:var(--muted);line-height:1.5;}
 textarea{width:100%;min-height:95px;padding:10px 12px;font-family:"DM Sans",sans-serif;font-size:14px;line-height:1.65;border:1px solid var(--border);border-radius:7px;background:var(--gray-light);color:var(--text);resize:vertical;transition:border-color .2s,background .2s;}
 textarea:focus{outline:none;border-color:var(--blue);background:white;}
-
 .submit-section{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;gap:16px;}
 #submit-btn{padding:12px 28px;font-family:"DM Sans",sans-serif;font-size:15px;font-weight:600;background:var(--blue);color:white;border:none;border-radius:8px;cursor:pointer;transition:opacity .2s,transform .1s;}
 #submit-btn:hover{opacity:.88;}
 #submit-btn:active{transform:scale(.98);}
 #submit-btn:disabled{opacity:.4;cursor:not-allowed;}
 #status-msg{font-size:13px;color:var(--muted);}
-
 #loading-view{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:20px;}
 .spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg)}}
 #loading-view p{font-size:15px;color:var(--muted);}
-
 #result-view{display:none;}
 .result-header{background:var(--blue);color:white;padding:2rem 2.5rem;}
 .result-header .discipline{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-bottom:4px;}
@@ -83,10 +68,9 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
 .score-label{font-size:13px;color:var(--muted);margin-top:6px;}
 .score-mention{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;padding:4px 14px;border-radius:20px;}
 .score-mention.tres-bien{background:var(--green-bg);color:var(--green);}
-.score-mention.bien{background:#E8F0FB;color:var(--blue);}
+.score-mention.bien{background:var(--blue-light);color:var(--blue);}
 .score-mention.assez-bien{background:var(--amber-bg);color:var(--amber);}
 .score-mention.encourage{background:var(--red-bg);color:var(--red);}
-
 .r-card{background:white;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;}
 .r-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .r-label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
@@ -99,13 +83,11 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
 .r-feedback.good{background:var(--green-bg);color:var(--green);}
 .r-feedback.partial{background:var(--amber-bg);color:var(--amber);}
 .r-feedback.bad{background:var(--red-bg);color:var(--red);}
-
 .err-banner{background:var(--red-bg);border:1px solid #F5BCBC;border-radius:8px;padding:12px 16px;font-size:13px;color:var(--red);margin-bottom:1.5rem;}
 </style>
 </head>
 <body>
 
-<!-- FORMULAIRE -->
 <div id="form-view">
   <div class="page-header">
     <div class="discipline">Physique-Chimie &middot; 3ème</div>
@@ -120,7 +102,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
     </div>
   </div>
   <div class="progress-wrap"><div id="progress-bar" style="width:0%"></div></div>
-
   <div class="container">
     <div class="identity-card">
       <div class="field-group">
@@ -133,7 +114,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
       </div>
     </div>
 
-    <!-- P1 -->
     <div class="section-header"><div class="num">1</div><h2>Mécanique</h2></div>
     <div class="question-card">
       <div class="question-top"><span class="question-num">Question 1</span><span class="pts">3 points</span></div>
@@ -144,8 +124,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
     </div>
 
     <div class="section-divider"></div>
-
-    <!-- P2 -->
     <div class="section-header"><div class="num">2</div><h2>Chimie — atome et ion</h2></div>
     <div class="question-card">
       <div class="question-top"><span class="question-num">Question 2</span><span class="pts">2 points</span></div>
@@ -159,8 +137,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
     </div>
 
     <div class="section-divider"></div>
-
-    <!-- P3 -->
     <div class="section-header"><div class="num">3</div><h2>Signaux — SONAR</h2></div>
     <div class="question-card">
       <div class="question-top"><span class="question-num">Question 4</span><span class="pts">4 points</span></div>
@@ -170,8 +146,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
     </div>
 
     <div class="section-divider"></div>
-
-    <!-- P4 -->
     <div class="section-header"><div class="num">4</div><h2>Sécurité chimique</h2></div>
     <div class="question-card">
       <div class="question-top"><span class="question-num">Question 5</span><span class="pts">3 points</span></div>
@@ -185,8 +159,6 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
     </div>
 
     <div class="section-divider"></div>
-
-    <!-- P5 -->
     <div class="section-header"><div class="num">5</div><h2>Poids et masse</h2></div>
     <div class="question-card">
       <div class="question-top"><span class="question-num">Question 6</span><span class="pts">3 points</span></div>
@@ -208,13 +180,11 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
   </div>
 </div>
 
-<!-- CHARGEMENT -->
 <div id="loading-view">
   <div class="spinner"></div>
   <p>L'intelligence artificielle corrige votre devoir&hellip;</p>
 </div>
 
-<!-- RÉSULTATS -->
 <div id="result-view">
   <div class="result-header">
     <div class="discipline">Physique-Chimie &middot; 3ème &mdash; Correction</div>
@@ -233,6 +203,9 @@ textarea:focus{outline:none;border-color:var(--blue);background:white;}
 </div>
 
 <script>
+const GEMINI_KEY = "AIzaSyAQ.Ab8RN6K5zHKs5YEa_wF3mfx8oLa4DtEACkPBozDzNzbPVI882w";
+const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + GEMINI_KEY;
+
 const QUESTIONS = [
   {id:"q1",label:"Q1 — Énergie cinétique",points:3},
   {id:"q2",label:"Q2 — Composition de l'atome de sodium",points:2},
@@ -243,7 +216,6 @@ const QUESTIONS = [
   {id:"q7",label:"Q7 — Calcul de la masse sur la Lune",points:3}
 ];
 
-// Minuteur
 let secondsLeft = 30*60;
 const timerEl = document.getElementById("timer-display");
 const timerInterval = setInterval(()=>{
@@ -252,24 +224,15 @@ const timerInterval = setInterval(()=>{
   const s=String(secondsLeft%60).padStart(2,"0");
   timerEl.textContent=m+":"+s;
   if(secondsLeft<=300) timerEl.classList.add("urgent");
-  if(secondsLeft<=0){
-    clearInterval(timerInterval);
-    document.getElementById("status-msg").textContent="Temps écoulé — envoi automatique.";
-    submitExam();
-  }
+  if(secondsLeft<=0){clearInterval(timerInterval);document.getElementById("status-msg").textContent="Temps écoulé — envoi automatique.";submitExam();}
 },1000);
 
-// Barre de progression
 function updateProgress(){
   const filled=QUESTIONS.filter(q=>document.getElementById(q.id)?.value.trim().length>5).length;
   document.getElementById("progress-bar").style.width=Math.round(filled/QUESTIONS.length*100)+"%";
 }
-QUESTIONS.forEach(q=>{
-  const el=document.getElementById(q.id);
-  if(el) el.addEventListener("input",updateProgress);
-});
+QUESTIONS.forEach(q=>{const el=document.getElementById(q.id);if(el)el.addEventListener("input",updateProgress);});
 
-// Soumission
 async function submitExam(){
   const name=document.getElementById("sname").value.trim()||"Élève anonyme";
   const classe=document.getElementById("sclass").value.trim()||"–";
@@ -279,35 +242,34 @@ async function submitExam(){
   document.getElementById("loading-view").style.display="flex";
 
   const answers={};
-  QUESTIONS.forEach(q=>{ answers[q.id]=document.getElementById(q.id)?.value.trim()||""; });
+  QUESTIONS.forEach(q=>{answers[q.id]=document.getElementById(q.id)?.value.trim()||"";});
 
   const prompt=`Tu es un professeur de physique-chimie corrigeant un devoir type Brevet pour ${name} (${classe}).
 
-BARÈME ET CRITÈRES DÉTAILLÉS :
+BARÈME ET CRITÈRES :
 - Q1 (3 pts) : conversion 36 km/h → 10 m/s (1pt), formule Ec=½×m×v² appliquée (1pt), résultat = 4000 J avec unité (1pt)
-- Q2 (2 pts) : 11 protons (0,5pt), 12 neutrons (0,5pt), 11 électrons (0,5pt), explication de la lecture des indices (0,5pt)
-- Q3 (2 pts) : Na perd 1 électron — bien préciser PERD et pas GAGNE (1pt) → Na+ : 11 protons, 12 neutrons, 10 électrons (1pt)
-- Q4 (4 pts) : identification que le temps est divisé par 2 car aller-retour (1pt), formule d=v×t/2 (1pt), application numérique 1500×1,5 ou 1500×3÷2 (1pt), résultat = 2250 m avec unité (1pt)
-- Q5 (3 pts) : le produit attaque et détruit les tissus vivants ET les métaux (1pt), port de gants obligatoire (1pt), port de lunettes de protection (1pt)
-- Q6 (3 pts) : formule P=m×g citée (1pt), application 2,5×9,8 (1pt), résultat = 24,5 N avec l'unité Newton (1pt)
-- Q7 (3 pts) : formule m=P/g appliquée (1pt), résultat = 7,5 kg avec unité (1pt), explication que la masse est une grandeur invariante — elle ne change pas selon l'endroit, contrairement au poids (1pt)
+- Q2 (2 pts) : 11 protons (0,5pt), 12 neutrons (0,5pt), 11 électrons (0,5pt), lecture des indices expliquée (0,5pt)
+- Q3 (2 pts) : Na PERD 1 électron — préciser PERD et non GAGNE (1pt) → Na+ : 11 protons, 12 neutrons, 10 électrons (1pt)
+- Q4 (4 pts) : identification aller-retour ÷2 (1pt), formule d=v×t/2 (1pt), application 1500×1,5 ou 1500×3÷2 (1pt), résultat=2250 m avec unité (1pt)
+- Q5 (3 pts) : produit attaque tissus vivants ET métaux (1pt), port de gants (1pt), port de lunettes de protection (1pt)
+- Q6 (3 pts) : formule P=m×g citée (1pt), application 2,5×9,8 (1pt), résultat=24,5 N avec unité Newton (1pt)
+- Q7 (3 pts) : formule m=P/g (1pt), résultat=7,5 kg avec unité (1pt), masse invariante — ne change pas selon l'astre contrairement au poids (1pt)
 
 RÉPONSES DE L'ÉLÈVE :
 ${QUESTIONS.map(q=>`${q.label} (/${q.points} pts) :
 "${answers[q.id]||"(sans réponse)"}"`).join("\n\n")}
 
 Réponds UNIQUEMENT en JSON valide, sans backticks ni texte avant ou après :
-{"total":<entier 0-20>,"corrections":[{"id":"q1","score":<entier 0-3>,"max":3,"niveau":"good|partial|bad","feedback":"<2-3 phrases en français bienveillant : valorise ce qui est juste, explique précisément l'erreur ou ce qui manque, donne la correction si nécessaire>"},{"id":"q2","score":<0-2>,"max":2,"niveau":"good|partial|bad","feedback":"..."},{"id":"q3","score":<0-2>,"max":2,"niveau":"good|partial|bad","feedback":"..."},{"id":"q4","score":<0-4>,"max":4,"niveau":"good|partial|bad","feedback":"..."},{"id":"q5","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."},{"id":"q6","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."},{"id":"q7","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."}]}`;
+{"total":<entier 0-20>,"corrections":[{"id":"q1","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"<2-3 phrases bienveillantes en français : valorise ce qui est juste, explique l'erreur, donne la correction>"},{"id":"q2","score":<0-2>,"max":2,"niveau":"good|partial|bad","feedback":"..."},{"id":"q3","score":<0-2>,"max":2,"niveau":"good|partial|bad","feedback":"..."},{"id":"q4","score":<0-4>,"max":4,"niveau":"good|partial|bad","feedback":"..."},{"id":"q5","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."},{"id":"q6","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."},{"id":"q7","score":<0-3>,"max":3,"niveau":"good|partial|bad","feedback":"..."}]}`;
 
   let corrections=null, totalScore=0, errMsg=null;
   try{
-    const res=await fetch("https://api.anthropic.com/v1/messages",{
+    const res=await fetch(GEMINI_URL,{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
-        model:"claude-sonnet-4-20250514",
-        max_tokens:1500,
-        messages:[{role:"user",content:prompt}]
+        contents:[{parts:[{text:prompt}]}],
+        generationConfig:{temperature:0.2,maxOutputTokens:2048}
       })
     });
     if(!res.ok){
@@ -315,12 +277,13 @@ Réponds UNIQUEMENT en JSON valide, sans backticks ni texte avant ou après :
       throw new Error(errData?.error?.message||"Erreur API "+res.status);
     }
     const data=await res.json();
-    const raw=data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim();
-    const parsed=JSON.parse(raw);
+    const raw=data.candidates?.[0]?.content?.parts?.[0]?.text||"";
+    const cleaned=raw.replace(/```json|```/g,"").trim();
+    const parsed=JSON.parse(cleaned);
     corrections=parsed.corrections;
     totalScore=parsed.total;
   }catch(e){
-    errMsg="La correction automatique est temporairement indisponible ("+e.message+"). Voici vos réponses enregistrées — votre professeur vous donnera la note.";
+    errMsg="La correction automatique est indisponible ("+e.message+"). Contactez votre professeur.";
     corrections=QUESTIONS.map(q=>({id:q.id,score:null,max:q.points,niveau:"partial",feedback:"Correction en attente."}));
     totalScore=null;
   }
@@ -329,10 +292,7 @@ Réponds UNIQUEMENT en JSON valide, sans backticks ni texte avant ou après :
   document.getElementById("result-view").style.display="block";
   document.getElementById("result-meta").textContent=name+" · "+classe+" · "+new Date().toLocaleString("fr-FR");
 
-  if(errMsg){
-    const b=document.getElementById("err-banner");
-    b.textContent=errMsg; b.style.display="block";
-  }
+  if(errMsg){const b=document.getElementById("err-banner");b.textContent=errMsg;b.style.display="block";}
 
   if(totalScore!==null){
     document.getElementById("score-num").textContent=totalScore;
@@ -353,19 +313,9 @@ Réponds UNIQUEMENT en JSON valide, sans backticks ni texte avant ou après :
     const scoreText=c.score!==null?`${c.score} / ${c.max} pt${c.max>1?"s":""}`:"– / "+c.max+" pts";
     const card=document.createElement("div");
     card.className="r-card";
-    card.innerHTML=`
-      <div class="r-card-top">
-        <span class="r-label">${q.label}</span>
-        <span class="r-score ${c.niveau}">${scoreText}</span>
-      </div>
-      <div class="r-ans">${ans.replace(/</g,"&lt;")}</div>
-      <div class="r-feedback ${c.niveau}">${c.feedback}</div>`;
+    card.innerHTML=`<div class="r-card-top"><span class="r-label">${q.label}</span><span class="r-score ${c.niveau}">${scoreText}</span></div><div class="r-ans">${ans.replace(/</g,"&lt;")}</div><div class="r-feedback ${c.niveau}">${c.feedback}</div>`;
     list.appendChild(card);
-    if(i<corrections.length-1){
-      const d=document.createElement("div");
-      d.style.cssText="height:1px;background:var(--border);margin:1rem 0";
-      list.appendChild(d);
-    }
+    if(i<corrections.length-1){const d=document.createElement("div");d.style.cssText="height:1px;background:var(--border);margin:1rem 0";list.appendChild(d);}
   });
 }
 </script>
